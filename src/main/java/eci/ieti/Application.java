@@ -159,6 +159,7 @@ public class Application implements CommandLineRunner {
         }
         System.out.println();
          **/
+
         System.out.println("Todos that contains a description with a length greater than 30 characters");
         System.out.println("-------------------------------");
         Query query4 = new Query();
