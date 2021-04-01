@@ -1,6 +1,26 @@
 # 2.3 JPA with MongoDB
 Create a Spring Boot Application that connects with MongoDB.
 
+## Parte1.
+
+![](fotos/pregunta1.PNG)
+## Preguntas punto 6
+
+1.	Creo 5.
+2.	Se encuentra implementado en el método run de la clase Application.
+3.	Al igual que en el código fuente dado, modificaría la expresión as findByDescriptionContaining(PageRequest.of(0, 50)).
+4.	El método aloja 9 productos, de los cuales 4 productos tienen la palabra plus.
+5.	Solo se paginaron 2 ya que el page request iba de 0 a 2.
+6.	Existen 2 colecciones, customer, que contiene los usuarios y producto, que contiene los nombres y descripciones de los productos.
+
+## Parte2.
+
+![](fotos/prueba2.PNG)
+![](fotos/prueba3.PNG)
+![](fotos/prueba4.PNG)
+![](fotos/prueba5.PNG)
+![](fotos/prueba6.PNG)
+
 ## Part 1: Basic Mongo DB configuration and Spring Boot Integration
 1. Create a MongoDB Atlas account on [https://www.mongodb.com/atlas-signup-from-mlab](https://www.mongodb.com/atlas-signup-from-mlab):
 
