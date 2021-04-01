@@ -3,19 +3,21 @@ package eci.ieti.data.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 @Document
 public class Todo {
     @Id
     private Long id;
     private String description;
     private int priority;
-    private String dueDate;
-    private String responsable;
+    private Date dueDate;
+    private User responsable;
     private String status;
 
     public Todo(){}
 
-    public Todo(Long id, String description, int priority, String dueDate, String responsable, String status) {
+    public Todo(Long id, String description, int priority, Date dueDate, User responsable, String status) {
         this.id = id;
         this.description = description;
         this.priority = priority;
@@ -48,19 +50,19 @@ public class Todo {
         this.priority = priority;
     }
 
-    public String getDueDate() {
+    public Date getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(String dueDate) {
+    public void setDueDate(Date dueDate) {
         this.dueDate = dueDate;
     }
 
-    public String getresponsable() {
+    public User getresponsable() {
         return responsable;
     }
 
-    public void setresponsable(String responsable) {
+    public void setresponsable(User responsable) {
         this.responsable = responsable;
     }
 
@@ -76,6 +78,6 @@ public class Todo {
     public String toString() {
         return String.format(
                 "Todo [id=%s, description='%s', priority='%s', dueDate='%s', responsable='%s', status='%s']",
-                id, description, priority, dueDate, responsable, status);
+                id, description, priority, dueDate, responsable.getName(), status);
     }
 }
